@@ -6,7 +6,7 @@ import PageConversion from "@/components/PageConversion";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import { ServiceCards } from "@/components/Sections";
-import { SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV } from "@/lib/data";
+import { PAGE_HERO_IMAGES, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV } from "@/lib/data";
 
 const RELATED_SERVICES = {
   "ac-repair": ["diagnosis", "gas-leak-repair", "gas-top-up"],
@@ -33,7 +33,7 @@ export default function ServicePage() {
     [`Can I get an estimate before ${s.t.toLowerCase()}?`, "The team can inspect the issue and explain the recommended work and estimate before repairs begin."],
   ];
   return (<main>
-    <Banner crumbs={[["Services", "/services"], [s.t]]} title={s.t} sub={s.tag} />
+    <Banner crumbs={[["Services", "/services"], [s.t]]} title={s.t} sub={s.tag} image={PAGE_HERO_IMAGES.services} />
     <section className="service-overview-section"><Reveal className="wrap">
       <div className="two service-overview">
         <div><span className="pill">Overview</span><h2>{s.t} in Dubai</h2><p className="sub">{s.intro}</p></div>

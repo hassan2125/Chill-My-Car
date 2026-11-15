@@ -3,11 +3,11 @@ import { Banner, Cards, Cta } from "@/components/PageParts";
 import Reveal from "@/components/Reveal";
 import PageConversion from "@/components/PageConversion";
 import { Areas, USPs } from "@/components/Sections";
-import { SERVICE_IMAGES } from "@/lib/data";
+import { PAGE_HERO_IMAGES, SERVICE_IMAGES } from "@/lib/data";
 export default function About() {
   useTitle("About Us");
   return (<main>
-    <Banner crumbs={[["About"]]} title="About Chill My Car" sub="Dubai’s car AC specialists. We keep your cabin cold, from Business Bay to the Marina." />
+    <Banner crumbs={[["About"]]} title="About Chill My Car" sub="Dubai’s car AC specialists. We keep your cabin cold, from Business Bay to the Marina." image={PAGE_HERO_IMAGES.about} />
     <section className="about-story-section"><Reveal className="wrap about-story">
       <div className="about-story-copy"><span className="pill">Our story</span><h2>Built for Dubai’s heat.</h2>
         <p className="sub">A strong car AC isn’t a luxury here. It’s essential. Chill My Car was set up to make car AC repair simple: honest diagnosis, genuine parts and service that comes to you.</p>

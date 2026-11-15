@@ -15,13 +15,21 @@ export const brandLogoUrl = (name) => {
   return `https://www.carlogos.org/car-logos/${slug}-logo.png`;
 };
 export const GL=[["Compressor inspection","Diagnosis","gauge",205],["Vent deep cleaning","Cleaning","spark",190],["Gas leak detection","Repair","leak",215],["Condenser check","Repair","wrench",20],["On-site service","On-site","car",200],["Battery testing","Battery","bat",30],["Cabin filter replacement","Cleaning","spark",210],["Gas top-up","Repair","drop",195],["Home diagnosis","On-site","home",220],["Pressure test","Diagnosis","gauge",25],["Blower & coil cleaning","Cleaning","cog",200],["Jump start","Battery","bat",15]];
+export const PAGE_HERO_IMAGES={
+  home:"/images/stock/home-hero.jpg",
+  about:"/images/site/about-cabin.webp",
+  brands:"/images/site/brands-cabin.webp",
+  services:"/images/site/services-cabin.webp",
+  gallery:"/images/site/gallery-cabin.webp",
+  contact:"/images/site/hero-cabin.webp"
+};
 export const SERVICE_IMAGES={
-  "ac-repair":"https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85",
-  "gas-top-up":"https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=80",
-  "gas-leak-repair":"https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=900&q=80",
-  diagnosis:"https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=900&q=80",
-  "deep-cleaning":"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80",
-  battery:"https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=900&q=80"
+  "ac-repair":"/images/site/service-ac-repair.webp",
+  "gas-top-up":"/images/site/service-gas-top-up.webp",
+  "gas-leak-repair":"/images/site/service-gas-leak.webp",
+  diagnosis:"/images/site/service-diagnosis.webp",
+  "deep-cleaning":"/images/site/service-cleaning.webp",
+  battery:"/images/site/service-battery.webp"
 };
 export const SERVICE_INCLUDE_DETAILS={
   "ac-repair":[

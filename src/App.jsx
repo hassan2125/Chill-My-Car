@@ -11,6 +11,7 @@ import Gallery from "@/pages/Gallery";
 import Brands from "@/pages/Brands";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
+import { WA } from "@/lib/data";
 
 function ScrollManager() {
   const { pathname, hash, key } = useLocation();
@@ -23,9 +24,8 @@ function ScrollManager() {
 function Layout() {
   return (<>
     <ScrollManager /><Nav /><Outlet /><Footer />
-    <a className="whatsapp-float" href="https://wa.me/971500000000" target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp">
+    <a className="whatsapp-float" href={WA()} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
       <span className="whatsapp-float-icon"><Icon n="whatsapp" /></span>
-      <span>WhatsApp</span>
     </a>
   </>);
 }

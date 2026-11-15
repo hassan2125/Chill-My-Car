@@ -3,12 +3,13 @@ import { Banner } from "@/components/PageParts";
 import BookingForm from "@/components/BookingForm";
 import { Faq, Steps, Testimonials, USPs } from "@/components/Sections";
 import { CONTACT_FAQS } from "@/lib/pageFaqs";
+import { PAGE_HERO_IMAGES } from "@/lib/data";
 
 export default function Contact() {
   useTitle("Contact Us");
   return (
     <main>
-      <Banner crumbs={[["Contact"]]} title="Let’s get your car cool." sub="Tell us what your car needs and our team will help you with the next step." />
+      <Banner crumbs={[["Contact"]]} title="Let’s get your car cool." sub="Tell us what your car needs and our team will help you with the next step." image={PAGE_HERO_IMAGES.contact} />
       <BookingForm />
       <USPs />
       <Steps />
