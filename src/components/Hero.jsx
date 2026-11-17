@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="wrap hg">
         <div className="ht">
           <span className="pill">Dubai’s car AC specialists</span>
-          <h1>Beat the heat.<br /><em>Chill your car.</em></h1>
+          <h1>Beat the heat. <em>Chill your car.</em></h1>
           <p className="lead">Expert car AC repair, regas and diagnostics for every make. We come to you in Dubai, with a free cost estimate before any work starts.</p>
           <div className="ctas">
             <Link to="/contact#book" className="btn p">Book a Service</Link>

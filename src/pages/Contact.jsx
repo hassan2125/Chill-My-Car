@@ -8,7 +8,7 @@ import { PAGE_HERO_IMAGES } from "@/lib/data";
 export default function Contact() {
   useTitle("Contact Us");
   return (
-    <main>
+    <main className="contact-page">
       <Banner crumbs={[["Contact"]]} title="Let’s get your car cool." sub="Tell us what your car needs and our team will help you with the next step." image={PAGE_HERO_IMAGES.contact} />
       <BookingForm />
       <USPs />

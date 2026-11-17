@@ -6,7 +6,7 @@ import { Areas, USPs } from "@/components/Sections";
 import { PAGE_HERO_IMAGES, SERVICE_IMAGES } from "@/lib/data";
 export default function About() {
   useTitle("About Us");
-  return (<main>
+  return (<main className="about-page">
     <Banner crumbs={[["About"]]} title="About Chill My Car" sub="Dubai’s car AC specialists. We keep your cabin cold, from Business Bay to the Marina." image={PAGE_HERO_IMAGES.about} />
     <section className="about-story-section"><Reveal className="wrap about-story">
       <div className="about-story-copy"><span className="pill">Our story</span><h2>Built for Dubai’s heat.</h2>

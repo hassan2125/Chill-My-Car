@@ -17,18 +17,18 @@ export const brandLogoUrl = (name) => {
 export const GL=[["Compressor inspection","Diagnosis","gauge",205],["Vent deep cleaning","Cleaning","spark",190],["Gas leak detection","Repair","leak",215],["Condenser check","Repair","wrench",20],["On-site service","On-site","car",200],["Battery testing","Battery","bat",30],["Cabin filter replacement","Cleaning","spark",210],["Gas top-up","Repair","drop",195],["Home diagnosis","On-site","home",220],["Pressure test","Diagnosis","gauge",25],["Blower & coil cleaning","Cleaning","cog",200],["Jump start","Battery","bat",15]];
 export const PAGE_HERO_IMAGES={
   home:"/images/stock/home-hero.jpg",
-  about:"/images/site/about-cabin.webp",
-  brands:"/images/site/brands-cabin.webp",
+  about:"https://i.pinimg.com/1200x/39/33/6e/39336e36e0740611c412e31a9bec95de.jpg",
+  brands:"https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg",
   services:"/images/site/services-cabin.webp",
-  gallery:"/images/site/gallery-cabin.webp",
-  contact:"/images/site/hero-cabin.webp"
+  gallery:"https://images.pexels.com/photos/6130/cold-car-bmw-e46.jpg",
+  contact:"https://i.pinimg.com/1200x/f4/ea/37/f4ea3783468014e30220a955adfec658.jpg"
 };
 export const SERVICE_IMAGES={
   "ac-repair":"/images/site/service-ac-repair.webp",
   "gas-top-up":"/images/site/service-gas-top-up.webp",
-  "gas-leak-repair":"/images/site/service-gas-leak.webp",
+  "gas-leak-repair":"https://i.pinimg.com/1200x/2c/48/ea/2c48ea8c6ffbdd23c4ba6d52d2e336df.jpg",
   diagnosis:"/images/site/service-diagnosis.webp",
-  "deep-cleaning":"/images/site/service-cleaning.webp",
+  "deep-cleaning":"https://i.pinimg.com/1200x/94/3f/90/943f90c1d9458c980518266a417becbe.jpg",
   battery:"/images/site/service-battery.webp"
 };
 export const SERVICE_INCLUDE_DETAILS={

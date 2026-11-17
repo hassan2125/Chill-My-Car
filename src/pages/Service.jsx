@@ -1,11 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { useTitle } from "@/lib/useTitle";
 import NotFound from "./NotFound";
-import { Banner, Cards, Cta, Checklist } from "@/components/PageParts";
+import { Banner, Cards, Cta } from "@/components/PageParts";
 import PageConversion from "@/components/PageConversion";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
-import { ServiceCards } from "@/components/Sections";
+import { Marquee, ServiceCards } from "@/components/Sections";
 import { PAGE_HERO_IMAGES, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV } from "@/lib/data";
 
 const RELATED_SERVICES = {
@@ -32,19 +32,47 @@ export default function ServicePage() {
     [`What is included with ${s.t.toLowerCase()}?`, `${s.inc.slice(0, 3).join(", ")}. The exact work is confirmed after inspection.`],
     [`Can I get an estimate before ${s.t.toLowerCase()}?`, "The team can inspect the issue and explain the recommended work and estimate before repairs begin."],
   ];
-  return (<main>
+  return (<main className="service-detail-page">
     <Banner crumbs={[["Services", "/services"], [s.t]]} title={s.t} sub={s.tag} image={PAGE_HERO_IMAGES.services} />
     <section className="service-overview-section"><Reveal className="wrap">
-      <div className="two service-overview">
-        <div><span className="pill">Overview</span><h2>{s.t} in Dubai</h2><p className="sub">{s.intro}</p></div>
-        <Checklist className="sig service-signs" title="Signs you may need it" items={s.sig} icon="gauge" />
+      <div className="service-overview-layout">
+        <div className="service-overview-copy">
+          <span className="pill">Overview</span>
+          <h2>{s.t}: a focused fix for a cooler drive.</h2>
+          <p className="sub">{s.intro}</p>
+          <p className="service-overview-detail">We check the system, explain what we find and confirm the estimate before any work begins.</p>
+          <ul className="service-overview-points">
+            <li><Icon n="check" />System checked before recommendations</li>
+            <li><Icon n="check" />Clear communication throughout</li>
+            <li><Icon n="check" />Workshop or mobile options in Dubai</li>
+          </ul>
+          <div className="ctas service-overview-actions">
+            <a className="btn p" href="tel:+971553594858"><Icon n="phone" />Call to discuss</a>
+            <Link className="btn service-overview-outline" to="/contact#book"><Icon n="whatsapp" className="service-overview-whatsapp-icon" />Book Car AC Repair</Link>
+          </div>
+        </div>
+        <div className="service-overview-gallery">
+          {workImages.map((service) => (
+            <figure className={`service-overview-image${service.s === s.s ? " featured" : ""}`} key={service.s}>
+              <img src={SERVICE_IMAGES[service.s]} alt={`${service.t} service`} loading="lazy" />
+              <figcaption>{service.t}</figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
-      <div className="service-overview-gallery">
-        {workImages.map((service) => (
-          <figure className={`service-overview-image${service.s === s.s ? " featured" : ""}`} key={service.s}>
-            <img src={SERVICE_IMAGES[service.s]} alt={`${service.t} service`} loading="lazy" />
-            <figcaption>{service.t}</figcaption>
-          </figure>
+    </Reveal></section>
+    <section className="service-signs-section"><Reveal className="wrap">
+      <div className="service-signs-heading">
+        <div><span className="pill">When to book</span><h2>Signs you may need {s.t.toLowerCase()}.</h2></div>
+        <p>These symptoms can point to an issue. A proper check helps identify the cause and the right next step.</p>
+      </div>
+      <div className="service-signs-grid">
+        {s.sig.map((sign, index) => (
+          <div className="service-sign-card" key={sign}>
+            <span className="service-sign-number">0{index + 1}</span>
+            <Icon n="gauge" />
+            <p>{sign}</p>
+          </div>
         ))}
       </div>
     </Reveal></section>
@@ -74,7 +102,11 @@ export default function ServicePage() {
       <span className="pill">Our process</span><h2>Simple, transparent.</h2>
       <Cards items={[{ i: "search", t: "1. Inspect", p: "A full check of the system to find the real cause." }, { i: "wrench", t: "2. Fix what’s needed", p: "Genuine parts and clear pricing, no surprises." }, { i: "gauge", t: "3. Test the cooling", p: "We confirm real cooling performance before handover." }]} />
     </Reveal></section>
-    <section style={{ paddingTop: 0 }}><Reveal className="wrap"><span className="pill">More services</span>
+    <section className="service-brands-section"><Reveal className="wrap">
+      <span className="pill">Brands we service</span><h2>Car AC care for every make.</h2>
+      <p className="sub">From everyday vehicles to luxury and supercars, we work with the makes you drive across Dubai.</p>
+    </Reveal><Marquee /></section>
+    <section className="service-related-section"><Reveal className="wrap"><span className="pill">More services</span>
       <h2>Related services.</h2><ServiceCards services={relatedServices} /></Reveal></section>
     <PageConversion faqTitle={`About ${s.t.toLowerCase()}.`} faqItems={faqItems} />
     <Cta />

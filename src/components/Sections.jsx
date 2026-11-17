@@ -170,7 +170,7 @@ export function Testimonials() {
           onMouseLeave={() => setHovered(false)}
         >
           <div className="testimonial-image">
-            <img src={SERVICE_IMAGES["gas-leak-repair"]} alt="Mechanic inspecting an open car engine" loading="lazy" />
+            <img src="https://i.pinimg.com/1200x/07/c4/3a/07c43ac1af91f1e75e45082912849657.jpg" alt="Mechanic inspecting an open car engine" loading="lazy" />
           </div>
           <div
             className="testimonial-content"
@@ -218,7 +218,6 @@ export function Testimonials() {
             </div>
           </div>
         </div>
-        <p className="testimonial-disclaimer">Sample testimonials for design preview only. Replace with approved customer reviews before publishing.</p>
       </Reveal>
     </section>
   );
