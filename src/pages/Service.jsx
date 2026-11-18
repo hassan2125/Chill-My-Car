@@ -26,6 +26,20 @@ export default function ServicePage() {
     .map((serviceSlug) => SV.find((service) => service.s === serviceSlug))
     .filter(Boolean);
   const workImages = [s, ...relatedServices.slice(0, 2)];
+  const batteryOverviewImages = s.s === "battery"
+    ? [
+        { ...s, overviewImage: "https://images.pexels.com/photos/37177070/pexels-photo-37177070.jpeg" },
+        { ...relatedServices[0], overviewImage: "https://images.pexels.com/photos/32282232/pexels-photo-32282232.jpeg" },
+        relatedServices[1],
+      ].filter(Boolean)
+    : workImages;
+  const deepCleaningOverviewImages = s.s === "deep-cleaning"
+    ? [
+        workImages[0],
+        workImages[1],
+        { ...workImages[2], overviewImage: "https://i.pinimg.com/1200x/26/29/f9/2629f9327a51f9b9f03000b4f7f80e00.jpg" },
+      ].filter(Boolean)
+    : batteryOverviewImages;
   const faqItems = [
     ...s.faq,
     [`What signs may mean I need ${s.t.toLowerCase()}?`, `Look out for ${s.sig.slice(0, 3).join(", ").toLowerCase()}. A diagnosis can confirm the cause.`],
@@ -52,10 +66,9 @@ export default function ServicePage() {
           </div>
         </div>
         <div className="service-overview-gallery">
-          {workImages.map((service) => (
+          {deepCleaningOverviewImages.map((service) => (
             <figure className={`service-overview-image${service.s === s.s ? " featured" : ""}`} key={service.s}>
-              <img src={SERVICE_IMAGES[service.s]} alt={`${service.t} service`} loading="lazy" />
-              <figcaption>{service.t}</figcaption>
+              <img src={service.overviewImage || SERVICE_IMAGES[service.s]} alt={`${service.t} service`} loading="lazy" />
             </figure>
           ))}
         </div>
