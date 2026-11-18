@@ -7,7 +7,7 @@ export const PAGE_FAQS = {
       ["Do you inspect the car AC before recommending repairs?", "Yes. The findings and estimate are explained before any car AC repair work begins."],
       ["How do I confirm the 50% car AC offer?", "Share the car AC service you need when booking. The team can confirm eligibility and offer terms before work begins."],
       ["Can I request car AC service in my area?", "Share your location and car AC symptoms when booking so the team can confirm available service options."],
-      ["How do I book car AC repair?", "Use the booking form to share your car details and car AC symptoms. It opens WhatsApp so you can review your request before sending."],
+      ["How do I book car AC repair?", "Chat with our team on WhatsApp and share your car details and AC symptoms to request a booking."],
     ],
   },
   services: {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SV } from "@/lib/data";
+import { SV, WA } from "@/lib/data";
 import Icon from "./Icon";
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="fl"><b>Services</b><span id="fsv">{SV.map((s) => <Link key={s.s} to={`/services/${s.s}`}>{s.t}</Link>)}</span></div>
-        <div className="fl"><b>Company</b><Link to="/about">About</Link><Link to="/gallery">Gallery</Link><Link to="/brands">Brands</Link><Link to="/contact">Contact</Link><Link to="/contact#book">Book car AC repair</Link></div>
+        <div className="fl"><b>Company</b><Link to="/about">About</Link><Link to="/gallery">Gallery</Link><Link to="/brands">Brands</Link><Link to="/contact">Contact</Link><a href={WA()} target="_blank" rel="noopener noreferrer">Book car AC repair</a></div>
         <div className="fl footer-contact">
           <b>Contact</b>
           <a href="tel:+971553594858"><Icon n="phone" />055 359 4858</a>

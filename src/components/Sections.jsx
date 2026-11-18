@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
-import { SV, A, BR, SERVICE_IMAGES, brandLogoUrl } from "@/lib/data";
+import { SV, A, BR, WA, SERVICE_IMAGES, brandLogoUrl } from "@/lib/data";
 
 export function Marquee() {
   const logoBrands = ["Aston Martin", "Bentley", "BMW", "Jaguar", "Land Rover", "Mercedes", "Ferrari", "Lamborghini", "Hyundai", "Honda", "Nissan", "Ford"];
@@ -67,8 +67,8 @@ export function Offer() {
   return (
     <section className="home-offer"><Reveal className="wrap"><div className="offer">
       <div className="n">50%</div>
-      <div><h2>Off car AC repairs.</h2><p>Book online and share your AC symptoms. We’ll confirm the offer terms, inspection details and estimate before any AC work begins.</p>
-        <Link to="/contact#book" className="btn">Claim 50% off <Icon n="arrow" /></Link></div>
+      <div><h2>Off car AC repairs.</h2><p>Chat on WhatsApp and share your AC symptoms. We’ll confirm the offer terms, inspection details and estimate before any AC work begins.</p>
+        <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn">Claim 50% off <Icon n="arrow" /></a></div>
     </div></Reveal></section>
   );
 }
@@ -126,7 +126,7 @@ export function Faq({ id = "faq", title = "Good questions.", items }) {
     ["Does a car AC gas top-up fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
     ["Do you inspect the car AC before recommending repairs?", "Yes. The findings and estimate are explained before any car AC repair work begins."],
     ["Can I request car AC service in my area?", "Share your location and car AC symptoms when booking so the team can confirm the available service option."],
-    ["How do I book car AC repair?", "Use the booking form to share your car details and car AC symptoms. It opens WhatsApp so you can review your request before sending."],
+    ["How do I book car AC repair?", "Chat with our team on WhatsApp and share your car details and AC symptoms to request a booking."],
   ];
   return (
     <section id={id} className="faq-section">
@@ -136,7 +136,7 @@ export function Faq({ id = "faq", title = "Good questions.", items }) {
           <h2>{title}</h2>
           <p>Helpful details about our services, booking and what to expect from your car AC visit.</p>
           <div className="faq-actions">
-            <Link className="btn p faq-cta" to="/contact#book">Book Car AC Repair <Icon n="arrow" /></Link>
+            <a className="btn p faq-cta" href={WA()} target="_blank" rel="noopener noreferrer">Book Car AC Repair <Icon n="arrow" /></a>
             <a className="btn phone-cta faq-phone-cta" href="tel:+971553594858"><Icon n="phone" />055 359 4858</a>
           </div>
         </div>
