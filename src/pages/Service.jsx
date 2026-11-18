@@ -13,39 +13,30 @@ const RELATED_SERVICES = {
   "gas-top-up": ["gas-leak-repair", "diagnosis", "ac-repair"],
   "gas-leak-repair": ["gas-top-up", "ac-repair", "diagnosis"],
   diagnosis: ["ac-repair", "gas-top-up", "gas-leak-repair"],
-  "deep-cleaning": ["diagnosis", "ac-repair", "battery"],
-  battery: ["diagnosis", "ac-repair", "gas-top-up"],
+  "deep-cleaning": ["diagnosis", "ac-repair"],
 };
 
 export default function ServicePage() {
   const { slug } = useParams();
   const s = SV.find((x) => x.s === slug);
-  useTitle(s ? s.t + " in Dubai" : "Not found");
+  useTitle(
+    s ? s.seoTitle : "Page not found",
+    s ? s.seoDescription : "This page could not be found. Explore car AC repair and services from Cool My Car Dubai."
+  );
   if (!s) return <NotFound />;
   const relatedServices = (RELATED_SERVICES[s.s] || SV.filter((service) => service !== s).map((service) => service.s))
     .map((serviceSlug) => SV.find((service) => service.s === serviceSlug))
     .filter(Boolean);
+  const faqServiceName = s.s === "gas-top-up" ? "Car AC Gas Top-Up" : s.t;
   const workImages = [s, ...relatedServices.slice(0, 2)];
-  const batteryOverviewImages = s.s === "battery"
-    ? [
-        { ...s, overviewImage: "https://images.pexels.com/photos/37177070/pexels-photo-37177070.jpeg" },
-        { ...relatedServices[0], overviewImage: "https://images.pexels.com/photos/32282232/pexels-photo-32282232.jpeg" },
-        relatedServices[1],
-      ].filter(Boolean)
-    : workImages;
-  const deepCleaningOverviewImages = s.s === "deep-cleaning"
+  const overviewImages = s.s === "deep-cleaning"
     ? [
         workImages[0],
         workImages[1],
         { ...workImages[2], overviewImage: "https://i.pinimg.com/1200x/26/29/f9/2629f9327a51f9b9f03000b4f7f80e00.jpg" },
       ].filter(Boolean)
-    : batteryOverviewImages;
-  const faqItems = [
-    ...s.faq,
-    [`What signs may mean I need ${s.t.toLowerCase()}?`, `Look out for ${s.sig.slice(0, 3).join(", ").toLowerCase()}. A diagnosis can confirm the cause.`],
-    [`What is included with ${s.t.toLowerCase()}?`, `${s.inc.slice(0, 3).join(", ")}. The exact work is confirmed after inspection.`],
-    [`Can I get an estimate before ${s.t.toLowerCase()}?`, "The team can inspect the issue and explain the recommended work and estimate before repairs begin."],
-  ];
+    : workImages;
+  const faqItems = s.faq;
   return (<main className="service-detail-page">
     <Banner crumbs={[["Services", "/services"], [s.t]]} title={s.t} sub={s.tag} image={PAGE_HERO_IMAGES.services} />
     <section className="service-overview-section"><Reveal className="wrap">
@@ -66,7 +57,7 @@ export default function ServicePage() {
           </div>
         </div>
         <div className="service-overview-gallery">
-          {deepCleaningOverviewImages.map((service) => (
+          {overviewImages.map((service) => (
             <figure className={`service-overview-image${service.s === s.s ? " featured" : ""}`} key={service.s}>
               <img src={service.overviewImage || SERVICE_IMAGES[service.s]} alt={`${service.t} service`} loading="lazy" />
             </figure>
@@ -91,7 +82,7 @@ export default function ServicePage() {
     </Reveal></section>
     <section className="service-included-section"><Reveal className="wrap">
       <div className="service-included-heading">
-        <div><span className="pill">What’s included</span><h2>Care tailored to your car.</h2></div>
+        <div><span className="pill">What’s included</span><h2>AC care tailored to your car.</h2></div>
         <p className="sub">We inspect your vehicle, explain what we find and confirm the work and estimate with you before repairs begin. Here’s what this service can cover:</p>
       </div>
       <div className="service-included-grid">
@@ -104,7 +95,7 @@ export default function ServicePage() {
         ))}
       </div>
       <div className="service-included-footer">
-        <p>Not sure which item your car needs? We’ll explain the findings and answer your questions.</p>
+        <p>Not sure which AC work your car needs? We’ll explain the findings and answer your questions.</p>
         <div className="service-included-actions">
           <Link to="/contact#book" className="btn p">Get a free quote <Icon n="arrow" /></Link>
           <a href="tel:+971553594858" className="btn phone-cta service-phone-cta"><Icon n="phone" />055 359 4858</a>
@@ -119,9 +110,9 @@ export default function ServicePage() {
       <span className="pill">Brands we service</span><h2>Car AC care for every make.</h2>
       <p className="sub">From everyday vehicles to luxury and supercars, we work with the makes you drive across Dubai.</p>
     </Reveal><Marquee /></section>
-    <section className="service-related-section"><Reveal className="wrap"><span className="pill">More services</span>
-      <h2>Related services.</h2><ServiceCards services={relatedServices} /></Reveal></section>
-    <PageConversion faqTitle={`About ${s.t.toLowerCase()}.`} faqItems={faqItems} />
+    <section className="service-related-section"><Reveal className="wrap"><span className="pill">More car AC services</span>
+      <h2>Related AC services.</h2><ServiceCards services={relatedServices} /></Reveal></section>
+    <PageConversion faqTitle={`Questions about ${faqServiceName}.`} faqItems={faqItems} />
     <Cta />
   </main>);
 }

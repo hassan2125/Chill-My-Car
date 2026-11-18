@@ -24,7 +24,7 @@ export default function BrandGrid() {
       </div>
       <div className="bg4" style={{ marginTop: 30 }}>
         {list.map((x) => (<div className="br" key={x[0]}><BrandLogo name={x[0]} /><b>{x[0]}</b><span>{x[1]} car AC service</span></div>))}
-        {!list.length && <p className="sub">No match. Message us anyway.</p>}
+        {!list.length && <p className="sub">No match? Ask whether we can service your car AC.</p>}
       </div>
       <p className="sub" style={{ marginTop: 28 }}>Don’t see your car? <a href={WA("Hi, can you service my car AC?")} style={{ color: "var(--blue)", fontWeight: 600 }}>Ask us on WhatsApp</a>.</p>
     </>

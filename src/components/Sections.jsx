@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
@@ -11,7 +10,7 @@ export function Marquee() {
   }).filter((brand) => BR.some(([name]) => name === brand.name));
   const duplicated = [...brands, ...brands];
   return (
-    <div className="mq" aria-label="Car brands we service">
+    <div className="mq" aria-label="Car brands available for AC service">
       <div className="mq-frame">
         <div className="mq-track">{duplicated.map((brand, i) => (
           <Link key={`${brand.name}-${i}`} to="/brands" className="brand-pill" aria-label={`${brand.name} car AC service`}>
@@ -25,7 +24,7 @@ export function Marquee() {
 }
 
 export function Services() {
-  const serviceOrder = ["ac-repair", "diagnosis", "gas-top-up", "gas-leak-repair", "deep-cleaning", "battery"];
+  const serviceOrder = ["ac-repair", "diagnosis", "gas-top-up", "gas-leak-repair", "deep-cleaning"];
   const orderedServices = serviceOrder.map((slug) => SV.find((service) => service.s === slug)).filter(Boolean);
 
   return (
@@ -68,7 +67,7 @@ export function Offer() {
   return (
     <section className="home-offer"><Reveal className="wrap"><div className="offer">
       <div className="n">50%</div>
-      <div><h2>Off car AC repairs &amp; service.</h2><p>Book online, we collect your car and inspect the entire AC system at a certified garage. Half the price, full diagnosis.</p>
+      <div><h2>Off car AC repairs.</h2><p>Book online and share your AC symptoms. We’ll confirm the offer terms, inspection details and estimate before any AC work begins.</p>
         <Link to="/contact#book" className="btn">Claim 50% off <Icon n="arrow" /></Link></div>
     </div></Reveal></section>
   );
@@ -88,7 +87,7 @@ export function Why() {
   const f = [["award", "Quality assurance", "Every repair is tested for real cooling performance."], ["clock", "On-time service", "We respect your schedule and show up when promised."], ["cog", "Genuine parts", "Quality components matched to your make and model."], ["shield", "Repair warranty", "Work that’s backed, so you drive with confidence."]];
   return (
     <section className="why" id="why"><Reveal className="wrap">
-      <span className="pill">Why Chill My Car</span><h2>Built on trust.</h2><p className="sub">Four promises behind every job we do.</p>
+      <span className="pill">Why Cool My Car Dubai</span><h2>Built on trust.</h2><p className="sub">Four promises behind every car AC job.</p>
       <div className="f4">{f.map(([i, t, p]) => (<div className="f" key={t}><div className="ic"><Icon n={i} /></div><h3>{t}</h3><p>{p}</p></div>))}</div>
     </Reveal></section>
   );
@@ -97,9 +96,9 @@ export function Why() {
 export function USPs() {
   return (
     <section className="about-usps-section"><Reveal className="wrap">
-      <span className="pill">Chill My Car at a glance</span><h2>Car care, made simple.</h2>
+      <span className="pill">Cool My Car Dubai at a glance</span><h2>Car care, made simple.</h2>
       <div className="about-usps">
-        <div className="about-usp"><strong>{SV.length}</strong><span>Specialist services</span></div>
+        <div className="about-usp"><strong>{SV.length}</strong><span>Car AC services</span></div>
         <div className="about-usp"><strong>{BR.length}+</strong><span>Car brands listed</span></div>
         <div className="about-usp"><strong>{A.length}</strong><span>Dubai communities covered</span></div>
         <div className="about-usp"><strong>24/7</strong><span>Booking availability</span></div>
@@ -121,116 +120,13 @@ export function Areas({ title = <>All over Dubai.<br />All day.</> }) {
   );
 }
 
-export function Testimonials() {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [hovered, setHovered] = useState(false);
-  const [focused, setFocused] = useState(false);
-  const quotes = [
-    {
-      quote: "Booking felt straightforward, and I appreciated getting clear updates while my car's AC was being checked.",
-      name: "Sample customer 01",
-      detail: "A simple, informed service experience.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80",
-    },
-    {
-      quote: "The team explained the issue and talked me through the options before any repair work began.",
-      name: "Sample customer 02",
-      detail: "Clear answers, without the guesswork.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",
-    },
-    {
-      quote: "Having the car collected for inspection made it much easier to fit AC service into my day.",
-      name: "Sample customer 03",
-      detail: "Convenience that works around you.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=80",
-    },
-  ];
-
-  useEffect(() => {
-    if (paused || hovered || focused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
-    const timer = window.setInterval(() => {
-      setActive((current) => (current + 1) % quotes.length);
-    }, 5500);
-    return () => window.clearInterval(timer);
-  }, [paused, hovered, focused, quotes.length]);
-
-  const changeSlide = (index) => {
-    setActive((index + quotes.length) % quotes.length);
-    setPaused(true);
-  };
-  const current = quotes[active];
-
-  return (
-    <section className="testimonials">
-      <Reveal className="wrap testimonial-wrap">
-        <div
-          className={`testimonial-showcase${paused || hovered || focused ? " is-paused" : ""}`}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        >
-          <div className="testimonial-image">
-            <img src="https://i.pinimg.com/1200x/07/c4/3a/07c43ac1af91f1e75e45082912849657.jpg" alt="Mechanic inspecting an open car engine" loading="lazy" />
-          </div>
-          <div
-            className="testimonial-content"
-            onFocusCapture={() => setFocused(true)}
-            onBlurCapture={(event) => {
-              if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
-            }}
-          >
-            <span className="testimonial-kicker">Client testimonials</span>
-            <h2>Good service.<br /><span>Good to go.</span></h2>
-            <p className="testimonial-intro">A smoother experience, from your first booking to getting back on the road.</p>
-            <div className="testimonial-review" aria-live="off">
-              <span className="testimonial-quote-mark" aria-hidden="true">“</span>
-              <div className="testimonial-customer">
-                <img key={current.image} src={current.image} alt="" loading="lazy" />
-                <div><strong>{current.name}</strong><span>Sample review · illustrative copy</span></div>
-              </div>
-              <blockquote key={active} className="testimonial-quote-text">{current.quote}</blockquote>
-              <p className="testimonial-review-detail">{current.detail}</p>
-              <div className="testimonial-controls">
-                <div className="testimonial-progress" aria-label={`Review ${active + 1} of ${quotes.length}`}>
-                  {quotes.map((quote, index) => (
-                    <button
-                      key={quote.name}
-                      type="button"
-                      className={`testimonial-progress-item${active === index ? " active" : ""}`}
-                      onClick={() => changeSlide(index)}
-                      aria-label={`Show sample review ${index + 1}`}
-                      aria-current={active === index ? "true" : undefined}
-                    ><span /></button>
-                  ))}
-                </div>
-                <div className="testimonial-buttons">
-                  <button type="button" onClick={() => changeSlide(active - 1)} aria-label="Previous testimonial">‹</button>
-                  <button type="button" onClick={() => changeSlide(active + 1)} aria-label="Next testimonial">›</button>
-                  <button
-                    type="button"
-                    className="testimonial-toggle"
-                    onClick={() => setPaused((value) => !value)}
-                    aria-label={paused ? "Play testimonials" : "Pause testimonials"}
-                    title={paused ? "Play testimonials" : "Pause testimonials"}
-                  >{paused ? "▶" : "Ⅱ"}</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Reveal>
-    </section>
-  );
-}
-
 export function Faq({ id = "faq", title = "Good questions.", items }) {
   const list = items || [
-    ["How does the 50% car AC offer work?", "The current offer is for bookings made through the website. Chill My Car arranges collection and inspection at a certified garage; confirm eligibility and terms when you book."],
-    ["Can you collect my car or visit my location?", "The team can arrange vehicle collection for garage inspection. Ask when booking whether on-site service is available for your area and selected service."],
-    ["What car AC services do you offer?", "Services include AC repair, gas top-up, leak repair, system diagnosis, deep cleaning and battery services."],
-    ["Do I get a quote before repairs begin?", "The website advertises diagnostics and a cost estimate before work starts. Confirm the estimate and any applicable charges when booking."],
-    ["Which car brands can you service?", "Chill My Car lists support for luxury, supercar, everyday and American makes. Contact the team if your brand is not listed."],
-    ["How do I book?", "Choose a service and send your details using the form. It opens WhatsApp with your request ready to send."],
+    ["What are common signs my car AC needs attention?", "Warm air, weak airflow, unusual noises from the car AC or cooling that cuts out can indicate a fault. An inspection helps identify the cause."],
+    ["Does a car AC gas top-up fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
+    ["Do you inspect the car AC before recommending repairs?", "Yes. The findings and estimate are explained before any car AC repair work begins."],
+    ["Can I request car AC service in my area?", "Share your location and car AC symptoms when booking so the team can confirm the available service option."],
+    ["How do I book car AC repair?", "Use the booking form to share your car details and car AC symptoms. It opens WhatsApp so you can review your request before sending."],
   ];
   return (
     <section id={id} className="faq-section">
@@ -240,7 +136,7 @@ export function Faq({ id = "faq", title = "Good questions.", items }) {
           <h2>{title}</h2>
           <p>Helpful details about our services, booking and what to expect from your car AC visit.</p>
           <div className="faq-actions">
-            <Link className="btn p faq-cta" to="/contact#book">Book a Service <Icon n="arrow" /></Link>
+            <Link className="btn p faq-cta" to="/contact#book">Book Car AC Repair <Icon n="arrow" /></Link>
             <a className="btn phone-cta faq-phone-cta" href="tel:+971553594858"><Icon n="phone" />055 359 4858</a>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
-import Wave from "./Wave";
 import Reveal from "./Reveal";
 import { WA } from "@/lib/data";
 
@@ -11,20 +10,19 @@ export function Banner({ crumbs = [], title, sub, children, image }) {
       <div className="wrap">
         <div className="cr"><Link to="/">Home</Link>{crumbs.map(([l, h]) => <span key={l}> / {h ? <Link to={h}>{l}</Link> : l}</span>)}</div>
         <h1>{title}</h1><p className="lead">{sub}</p><div className="ctas">
-          <Link to="/contact#book" className="btn p">Book a Service</Link>
+          <Link to="/contact#book" className="btn p">Book Car AC Repair</Link>
           <a href="tel:+971553594858" className="btn phone-cta hero-phone-cta"><Icon n="phone" />055 359 4858</a>
           {children}
         </div>
       </div>
-      <Wave />
     </section>
   );
 }
 
-export function Cta({ title = "Ready to chill your car?" }) {
+export function Cta({ title = "Ready for cooler air?" }) {
   return (
     <section style={{ padding: "10px 0 90px" }}><Reveal className="wrap"><div className="offer" style={{ gridTemplateColumns: "1fr" }}><div>
-      <h2>{title}</h2><p>Free diagnosis and a clear quote before any work starts.</p>
+      <h2>{title}</h2><p>Car AC repair, diagnostics, refrigerant top-ups, leak repair and AC cleaning across Dubai. Get a clear estimate before work begins.</p>
       <div className="ctas"><Link to="/contact#book" className="btn">Book free diagnosis <Icon n="arrow" /></Link><a className="btn g" href={WA()}>WhatsApp us</a></div>
     </div></div></Reveal></section>
   );

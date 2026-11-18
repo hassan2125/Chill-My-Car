@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-# Chill-My-Car
+# Cool My Car Dubai
 =======
-# Chill My Car – Vite + React Router
+# Cool My Car Dubai – Vite + React Router
 
     npm install
     npm run dev        # http://localhost:5173
@@ -20,7 +20,7 @@
 - `public/_redirects` – makes direct links (e.g. /about) work on Cloudflare Pages / Netlify
 
 ## Media and booking
-- The homepage hero uses a locally stored Pexels stock photo. Inner-page and service photos in `public/images/site` are sourced from the current Chill My Car website.
+- The homepage hero uses a locally stored Pexels stock photo. Inner-page and service photos in `public/images/site` are sourced from the current Cool My Car Dubai website.
 - The booking form validates the contact details and opens WhatsApp with a prefilled message. The visitor still needs to send that message in WhatsApp.
 - Update the business phone in `src/lib/data.js` and its contact links if it changes; update the email address in the form and footer if that changes.
 
