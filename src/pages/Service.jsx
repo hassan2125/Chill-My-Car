@@ -6,7 +6,7 @@ import PageConversion from "@/components/PageConversion";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import { Marquee, ServiceCards } from "@/components/Sections";
-import { PAGE_HERO_IMAGES, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV, WA } from "@/lib/data";
+import { PAGE_HERO_IMAGES, PHONE_DISPLAY, PHONE_TEL, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV, WA } from "@/lib/data";
 
 const RELATED_SERVICES = {
   "ac-repair": ["diagnosis", "gas-leak-repair", "gas-top-up"],
@@ -52,7 +52,7 @@ export default function ServicePage() {
             <li><Icon n="check" />Workshop or mobile options in Dubai</li>
           </ul>
           <div className="ctas service-overview-actions">
-            <a className="btn p" href="tel:+971553594858"><Icon n="phone" />Call to discuss</a>
+            <a className="btn p" href={`tel:${PHONE_TEL}`}><Icon n="phone" />Call to discuss</a>
             <a className="btn service-overview-outline" href={WA()} target="_blank" rel="noopener noreferrer"><Icon n="whatsapp" className="service-overview-whatsapp-icon" />Book Car AC Repair</a>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function ServicePage() {
         <p>Not sure which AC work your car needs? We’ll explain the findings and answer your questions.</p>
         <div className="service-included-actions">
           <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p">Get a free quote <Icon n="arrow" /></a>
-          <a href="tel:+971553594858" className="btn phone-cta service-phone-cta"><Icon n="phone" />055 359 4858</a>
+          <a href={`tel:${PHONE_TEL}`} className="btn phone-cta service-phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
         </div>
       </div>
     </Reveal></section>

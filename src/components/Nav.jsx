@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLayoutEffect, useRef, useState } from "react";
-import { SV, WA } from "@/lib/data";
+import { SV, PHONE_DISPLAY, PHONE_TEL, WA } from "@/lib/data";
 import Icon from "./Icon";
 export default function Nav() {
   const [o, setO] = useState(false);
@@ -46,12 +46,12 @@ export default function Nav() {
         </div>
         <Link to="/about">About</Link><Link to="/gallery">Gallery</Link><Link to="/brands">Brands</Link><Link to="/contact">Contact</Link>
         <div className="mobile-nav-actions">
-          <a href="tel:+971553594858" className="btn phone-cta"><Icon n="phone" />055 359 4858</a>
+          <a href={`tel:${PHONE_TEL}`} className="btn phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
           <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p">Book Car AC Repair</a>
         </div>
       </div>
       <div className="nav-actions">
-        <a href="tel:+971553594858" className="btn phone-cta"><Icon n="phone" />055 359 4858</a>
+        <a href={`tel:${PHONE_TEL}`} className="btn phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
         <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p">Book Car AC Repair</a>
       </div>
       <button className="bg" aria-label="Menu" onClick={() => { setO(!o); setServicesOpen(false); }}>{o ? "✕" : "☰"}</button>

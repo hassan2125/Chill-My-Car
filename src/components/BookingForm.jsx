@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
 import Icon from "./Icon";
-import { SV, A, WA } from "@/lib/data";
+import { SV, A, PHONE_DISPLAY, PHONE_TEL, WA } from "@/lib/data";
 
 export default function BookingForm() {
   const [form, setForm] = useState({
@@ -41,9 +41,9 @@ export default function BookingForm() {
               <p>Share your car details and AC symptoms. We’ll prepare a WhatsApp request for you to review and send.</p>
             </div>
             <div className="ct">
-              <a className="contact-row" href="tel:+971553594858">
+              <a className="contact-row" href={`tel:${PHONE_TEL}`}>
                 <span className="contact-icon"><Icon n="phone" /></span>
-                <span className="contact-copy"><strong>055 359 4858</strong><small>Call our team</small></span>
+                <span className="contact-copy"><strong>{PHONE_DISPLAY}</strong><small>Call our team</small></span>
               </a>
               <a className="contact-row" href={WA()} target="_blank" rel="noreferrer">
                 <span className="contact-icon"><Icon n="whatsapp" /></span>

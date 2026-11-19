@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SV, WA } from "@/lib/data";
+import { SV, PHONE_DISPLAY, PHONE_TEL, WA } from "@/lib/data";
 import Icon from "./Icon";
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="fl"><b>Company</b><Link to="/about">About</Link><Link to="/gallery">Gallery</Link><Link to="/brands">Brands</Link><Link to="/contact">Contact</Link><a href={WA()} target="_blank" rel="noopener noreferrer">Book car AC repair</a></div>
         <div className="fl footer-contact">
           <b>Contact</b>
-          <a href="tel:+971553594858"><Icon n="phone" />055 359 4858</a>
+          <a href={`tel:${PHONE_TEL}`}><Icon n="phone" />{PHONE_DISPLAY}</a>
           <a href="mailto:info@coolmycardubai.com"><Icon n="mail" />info@coolmycardubai.com</a>
           <a href="https://www.google.com/maps/search/?api=1&query=Al+Quoz%2C+Dubai" target="_blank" rel="noreferrer"><Icon n="pin" />Al Quoz, Dubai, UAE</a>
         </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
-import { SV, A, BR, WA, SERVICE_IMAGES, brandLogoUrl } from "@/lib/data";
+import { SV, A, BR, PHONE_DISPLAY, PHONE_TEL, WA, SERVICE_IMAGES, brandLogoUrl } from "@/lib/data";
 
 export function Marquee() {
   const logoBrands = ["Aston Martin", "Bentley", "BMW", "Jaguar", "Land Rover", "Mercedes", "Ferrari", "Lamborghini", "Hyundai", "Honda", "Nissan", "Ford"];
@@ -137,7 +137,7 @@ export function Faq({ id = "faq", title = "Good questions.", items }) {
           <p>Helpful details about our services, booking and what to expect from your car AC visit.</p>
           <div className="faq-actions">
             <a className="btn p faq-cta" href={WA()} target="_blank" rel="noopener noreferrer">Book Car AC Repair <Icon n="arrow" /></a>
-            <a className="btn phone-cta faq-phone-cta" href="tel:+971553594858"><Icon n="phone" />055 359 4858</a>
+            <a className="btn phone-cta faq-phone-cta" href={`tel:${PHONE_TEL}`}><Icon n="phone" />{PHONE_DISPLAY}</a>
           </div>
         </div>
         <div className="faq-list">

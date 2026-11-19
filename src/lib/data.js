@@ -1,4 +1,6 @@
-export const PHONE = "971553594858";
+export const PHONE = "971503125302";
+export const PHONE_TEL = "+971503125302";
+export const PHONE_DISPLAY = "050 312 5302";
 export const WA = (t) => "https://wa.me/" + PHONE + (t ? "?text=" + encodeURIComponent(t) : "");
 export const SV = [
   {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
-import { WA } from "@/lib/data";
+import { PHONE_DISPLAY, PHONE_TEL, WA } from "@/lib/data";
 
 export function Banner({ crumbs = [], title, sub, children, image }) {
   return (
@@ -11,7 +11,7 @@ export function Banner({ crumbs = [], title, sub, children, image }) {
         <div className="cr"><Link to="/">Home</Link>{crumbs.map(([l, h]) => <span key={l}> / {h ? <Link to={h}>{l}</Link> : l}</span>)}</div>
         <h1>{title}</h1><p className="lead">{sub}</p><div className="ctas">
           <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p">Book Car AC Repair</a>
-          <a href="tel:+971553594858" className="btn phone-cta hero-phone-cta"><Icon n="phone" />055 359 4858</a>
+          <a href={`tel:${PHONE_TEL}`} className="btn phone-cta hero-phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
           {children}
         </div>
       </div>
