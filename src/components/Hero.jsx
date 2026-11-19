@@ -11,7 +11,7 @@ export default function Hero() {
           <h1>Car AC repair <em>in Dubai.</em></h1>
           <p className="lead">Car AC repair, refrigerant regas, leak detection, diagnostics and cleaning across Dubai. Get a clear estimate before work begins.</p>
           <div className="ctas">
-            <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p">Book Car AC Repair</a>
+            <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p"><Icon n="whatsapp" className="whatsapp-cta-icon" />Book Car AC Repair</a>
             <a href={`tel:${PHONE_TEL}`} className="btn phone-cta hero-phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
           </div>
           <div className="hs"><div><b>24/7</b><span>Booking</span></div><div><b>Free</b><span>Diagnostics</span></div><div><b>At home</b><span>or our garage</span></div></div>

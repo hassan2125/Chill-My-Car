@@ -136,7 +136,7 @@ export function Faq({ id = "faq", title = "Good questions.", items }) {
           <h2>{title}</h2>
           <p>Helpful details about our services, booking and what to expect from your car AC visit.</p>
           <div className="faq-actions">
-            <a className="btn p faq-cta" href={WA()} target="_blank" rel="noopener noreferrer">Book Car AC Repair <Icon n="arrow" /></a>
+            <a className="btn p faq-cta" href={WA()} target="_blank" rel="noopener noreferrer"><Icon n="whatsapp" className="whatsapp-cta-icon" />Book Car AC Repair</a>
             <a className="btn phone-cta faq-phone-cta" href={`tel:${PHONE_TEL}`}><Icon n="phone" />{PHONE_DISPLAY}</a>
           </div>
         </div>
