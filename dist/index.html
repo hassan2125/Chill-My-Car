@@ -9,10 +9,14 @@
     <meta property="og:site_name" content="Cool My Car Dubai" />
     <meta property="og:title" content="Cool My Car Dubai | Car AC Repair in Dubai" />
     <meta property="og:description" content="Car AC repair in Dubai, including diagnostics, refrigerant regas, leak repair and AC cleaning. Get a clear estimate from Cool My Car Dubai." />
+    <meta property="og:url" content="https://coolmycardubai.com/" />
+    <meta property="og:image" content="https://coolmycardubai.com/images/site/hero-cabin.webp" />
     <meta property="og:locale" content="en_AE" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cool My Car Dubai | Car AC Repair in Dubai" />
     <meta name="twitter:description" content="Car AC repair in Dubai, including diagnostics, refrigerant regas, leak repair and AC cleaning. Get a clear estimate from Cool My Car Dubai." />
+    <meta name="twitter:image" content="https://coolmycardubai.com/images/site/hero-cabin.webp" />
+    <link rel="canonical" href="https://coolmycardubai.com/" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>❄️</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,32 +33,50 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Car AC service in Dubai",
-        "serviceType": "Car AC repair, diagnostics, refrigerant top-up, leak repair and cleaning",
-        "areaServed": {
-          "@type": "City",
-          "name": "Dubai"
-        },
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "Cool My Car Dubai",
-          "telephone": "+971503125302",
-          "email": "info@coolmycardubai.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Al Quoz",
-            "addressRegion": "Dubai",
-            "addressCountry": "AE"
+        "@graph": [
+          {
+            "@type": "AutoRepair",
+            "@id": "https://coolmycardubai.com/#business",
+            "name": "Cool My Car Dubai",
+            "url": "https://coolmycardubai.com/",
+            "image": "https://coolmycardubai.com/images/site/hero-cabin.webp",
+            "telephone": "+971503125302",
+            "email": "info@coolmycardubai.com",
+            "areaServed": {
+              "@type": "City",
+              "name": "Dubai"
+            },
+            "openingHoursSpecification": [
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday", "opens": "08:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday", "opens": "08:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Wednesday", "opens": "08:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Thursday", "opens": "08:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Friday", "opens": "08:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "opens": "08:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Sunday", "opens": "08:00", "closes": "20:00" }
+            ],
+            "paymentAccepted": "Cash, bank transfer, Visa, Mastercard"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://coolmycardubai.com/#car-ac-service",
+            "name": "Mobile car AC service in Dubai",
+            "serviceType": "Car AC repair, diagnostics, refrigerant top-up, leak repair and cleaning",
+            "areaServed": {
+              "@type": "City",
+              "name": "Dubai"
+            },
+            "provider": {
+              "@id": "https://coolmycardubai.com/#business"
+            }
           }
-        }
+        ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-B7d2umJa.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-m6CRbAGl.css">
+    <script type="module" crossorigin src="/assets/index-Bo-6apOg.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DG0lI7aZ.css">
   </head>
   <body>
-    <div id="root"></div>
-
+    <div id="root"></div>
   </body>
 </html>

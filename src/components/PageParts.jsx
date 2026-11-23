@@ -3,12 +3,11 @@ import Icon from "./Icon";
 import Reveal from "./Reveal";
 import { PHONE_DISPLAY, PHONE_TEL, WA } from "@/lib/data";
 
-export function Banner({ crumbs = [], title, sub, children, image }) {
+export function Banner({ title, sub, children, image }) {
   return (
     <section className={`pb${image ? " pb-with-image" : ""}`}>
       {image && <img className="pb-background-image" src={image} alt="" aria-hidden="true" />}
       <div className="wrap">
-        <div className="cr"><Link to="/">Home</Link>{crumbs.map(([l, h]) => <span key={l}> / {h ? <Link to={h}>{l}</Link> : l}</span>)}</div>
         <h1>{title}</h1><p className="lead">{sub}</p><div className="ctas">
           <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p"><Icon n="whatsapp" className="whatsapp-cta-icon" />Book Car AC Repair</a>
           <a href={`tel:${PHONE_TEL}`} className="btn phone-cta hero-phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>

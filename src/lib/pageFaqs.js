@@ -5,8 +5,7 @@ export const PAGE_FAQS = {
       ["What are common signs my car AC needs attention?", "Warm air, weak airflow, unusual noises from the car AC or cooling that cuts out can indicate a fault. An inspection helps identify the cause."],
       ["Does a car AC gas top-up fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
       ["Do you inspect the car AC before recommending repairs?", "Yes. The findings and estimate are explained before any car AC repair work begins."],
-      ["How do I confirm the 50% car AC offer?", "Share the car AC service you need when booking. The team can confirm eligibility and offer terms before work begins."],
-      ["Can I request car AC service in my area?", "Share your location and car AC symptoms when booking so the team can confirm available service options."],
+      ["Is mobile car AC service available 24/7?", "Yes. On-site mobile car AC service is available 24/7 across Dubai, with an average technician arrival time of 10–15 minutes."],
       ["How do I book car AC repair?", "Chat with our team on WhatsApp and share your car details and AC symptoms to request a booking."],
     ],
   },
@@ -24,7 +23,7 @@ export const PAGE_FAQS = {
     title: "About our car AC work.",
     items: [
       ["What does Cool My Car Dubai specialize in?", "The team focuses on car AC diagnosis, repair, refrigerant service and system cleaning."],
-      ["Where is Cool My Car Dubai based?", "The business is based in Al Quoz and serves drivers across Dubai. Share your area to confirm service availability."],
+      ["Where does Cool My Car Dubai provide service?", "Cool My Car Dubai provides mobile car AC service across Dubai. Share your area when booking so the team can confirm availability."],
       ["How are car AC repairs approved?", "The issue and recommended car AC work are explained with an estimate before repair begins. You can confirm the work before authorizing it."],
       ["Which vehicle makes can you provide car AC service for?", "The Brands page lists supported makes. Share your exact model and year so the team can confirm suitability."],
       ["Will diagnosis automatically lead to a repair?", "No. Diagnosis helps identify the issue and recommended next step; repair work requires your approval."],
@@ -56,9 +55,9 @@ export const CONTACT_FAQS = {
   title: "Before you get in touch.",
   items: [
     ["How is my car AC booking request sent?", "The form opens a prepared WhatsApp message. Review it and press Send in WhatsApp to submit your request."],
+    ["Is mobile car AC service available 24/7?", "Yes. On-site mobile car AC service is available 24/7 across Dubai, with an average technician arrival time of 10–15 minutes."],
     ["What should I include in my car AC service request?", "Add your contact details, car make and model, car AC symptoms, preferred service and Dubai location."],
     ["Do I need to know which car AC service to choose?", "No. Describe the symptoms and the team can help identify an appropriate car AC inspection or service."],
-    ["When will car AC repair work begin?", "The recommended car AC work and estimate are discussed first. Repairs proceed only after you approve them."],
     ["Do you serve my area in Dubai for car AC service?", "Service options depend on your location and the car AC work required. Include your area so the team can confirm."],
   ],
 };

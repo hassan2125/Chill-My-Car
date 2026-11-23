@@ -5,8 +5,8 @@ import { Banner, Cards, Cta } from "@/components/PageParts";
 import PageConversion from "@/components/PageConversion";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
-import { Marquee, ServiceCards } from "@/components/Sections";
-import { PAGE_HERO_IMAGES, PHONE_DISPLAY, PHONE_TEL, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV, WA } from "@/lib/data";
+import { Marquee, ServiceCards, Testimonials } from "@/components/Sections";
+import { AVERAGE_ARRIVAL_MINUTES, PAGE_HERO_IMAGES, PHONE_DISPLAY, PHONE_TEL, SERVICE_AVAILABILITY, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV, WA } from "@/lib/data";
 
 const RELATED_SERVICES = {
   "ac-repair": ["diagnosis", "gas-leak-repair", "gas-top-up"],
@@ -38,7 +38,7 @@ export default function ServicePage() {
     : workImages;
   const faqItems = s.faq;
   return (<main className="service-detail-page">
-    <Banner crumbs={[["Services", "/services"], [s.t]]} title={s.t} sub={s.tag} image={PAGE_HERO_IMAGES.services} />
+    <Banner title={s.t} sub={s.tag} image={PAGE_HERO_IMAGES.services} />
     <section className="service-overview-section"><Reveal className="wrap">
       <div className="service-overview-layout">
         <div className="service-overview-copy">
@@ -46,10 +46,23 @@ export default function ServicePage() {
           <h2>{s.t}: a focused fix for a cooler drive.</h2>
           <p className="sub">{s.intro}</p>
           <p className="service-overview-detail">We check the system, explain what we find and confirm the estimate before any work begins.</p>
-          <ul className="service-overview-points">
-            <li><Icon n="check" />System checked before recommendations</li>
-            <li><Icon n="check" />Clear communication throughout</li>
-            <li><Icon n="check" />Workshop or mobile options in Dubai</li>
+          <ul className="service-overview-points" aria-label="Service benefits">
+            <li className="service-overview-point">
+              <span className="service-overview-point-icon"><Icon n="check" /></span>
+              <span className="service-overview-point-copy"><strong>System checked</strong><small>Before recommendations</small></span>
+            </li>
+            <li className="service-overview-point">
+              <span className="service-overview-point-icon"><Icon n="mail" /></span>
+              <span className="service-overview-point-copy"><strong>Clear communication</strong><small>Throughout your service</small></span>
+            </li>
+            <li className="service-overview-point">
+              <span className="service-overview-point-icon"><Icon n="clock" /></span>
+              <span className="service-overview-point-copy"><strong>{SERVICE_AVAILABILITY} on-site mobile service</strong><small>Available across Dubai</small></span>
+            </li>
+            <li className="service-overview-point">
+              <span className="service-overview-point-icon"><Icon n="truck" /></span>
+              <span className="service-overview-point-copy"><strong>{AVERAGE_ARRIVAL_MINUTES} minutes</strong><small>Average technician arrival time</small></span>
+            </li>
           </ul>
           <div className="ctas service-overview-actions">
             <a className="btn p" href={`tel:${PHONE_TEL}`}><Icon n="phone" />Call to discuss</a>
@@ -97,7 +110,7 @@ export default function ServicePage() {
       <div className="service-included-footer">
         <p>Not sure which AC work your car needs? We’ll explain the findings and answer your questions.</p>
         <div className="service-included-actions">
-          <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p">Get a free quote <Icon n="arrow" /></a>
+          <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p"><Icon n="whatsapp" className="whatsapp-cta-icon" />Get a free quote</a>
           <a href={`tel:${PHONE_TEL}`} className="btn phone-cta service-phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
         </div>
       </div>
@@ -112,6 +125,7 @@ export default function ServicePage() {
     </Reveal><Marquee /></section>
     <section className="service-related-section"><Reveal className="wrap"><span className="pill">More car AC services</span>
       <h2>Related AC services.</h2><ServiceCards services={relatedServices} /></Reveal></section>
+    <Testimonials />
     <PageConversion faqTitle={`Questions about ${faqServiceName}.`} faqItems={faqItems} />
     <Cta />
   </main>);

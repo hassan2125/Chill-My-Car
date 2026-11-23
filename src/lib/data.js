@@ -1,6 +1,8 @@
 export const PHONE = "971503125302";
 export const PHONE_TEL = "+971503125302";
 export const PHONE_DISPLAY = "050 312 5302";
+export const SERVICE_AVAILABILITY = "24/7";
+export const AVERAGE_ARRIVAL_MINUTES = "10–15";
 export const WA = (t) => "https://wa.me/" + PHONE + (t ? "?text=" + encodeURIComponent(t) : "");
 export const SV = [
   {
@@ -18,6 +20,7 @@ export const SV = [
       ["Do you inspect the car AC before recommending repairs?", "Yes. We check the relevant cooling-system components, explain our findings and confirm an estimate before car AC work begins."],
       ["Can you repair a car AC refrigerant leak?", "Yes. If the inspection finds a leak, we can explain the repair options and any refrigerant recharge required afterward."],
       ["Do you check car AC cooling after a repair?", "The car AC system is tested after the agreed repair to check its cooling performance."],
+      ["Can a car AC repair fix intermittent cooling?", "It depends on the cause. Describe when the cooling cuts out so the inspection can focus on the symptoms and identify the right repair."],
     ],
   },
   {
@@ -35,6 +38,7 @@ export const SV = [
       ["Do you check the car AC for leaks before recharging?", "We assess pressure and look for signs of refrigerant loss. If a leak is suspected, we recommend checking its source rather than repeatedly topping up."],
       ["Will a car AC gas top-up fix every cooling problem?", "No. Weak cooling can also come from airflow, electrical or component faults. Car AC diagnosis helps determine the right service."],
       ["Can I request car AC regas at my location?", "Location options depend on your area and the work required. Share your location when booking so the team can confirm."],
+      ["How do you choose the right refrigerant for my car?", "We match the refrigerant to the vehicle specification and check the AC system before recommending a top-up."],
     ],
   },
   {
@@ -52,6 +56,7 @@ export const SV = [
       ["Can I keep topping up a leaking car AC system?", "Repeated top-ups do not fix the leak. Finding and addressing the source helps prevent continued refrigerant loss."],
       ["Which parts do you check for a car AC leak?", "Common leak points such as hoses, connections, valves, the compressor and condenser may be inspected."],
       ["Is refrigerant recharged after a car AC leak repair?", "If required, refrigerant is recharged to the vehicle specification after the repair and the car AC system is checked."],
+      ["What should I do if my car AC loses refrigerant again?", "A recurring loss may indicate an unresolved leak. Contact us for an inspection rather than relying on repeated top-ups."],
     ],
   },
   {
@@ -69,6 +74,7 @@ export const SV = [
       ["Why is my car AC blowing warm air?", "Low refrigerant, a leak, restricted airflow or a component fault can reduce cooling. A system check helps distinguish between causes."],
       ["Does car AC diagnosis include a repair?", "Diagnosis identifies the likely cause and recommended work. Car AC repairs are discussed with you and only proceed after approval."],
       ["Can you diagnose intermittent car AC cooling?", "Yes. Share when the cooling drops out and any other symptoms so the inspection can focus on the conditions you notice."],
+      ["What should I tell the technician before car AC diagnosis?", "Share when the problem occurs, any unusual sounds or smells, and recent AC work or refrigerant top-ups."],
     ],
   },
   {
@@ -86,6 +92,7 @@ export const SV = [
       ["Will car AC cleaning fix weak cooling?", "Only if dirt or restricted airflow is contributing. Refrigerant or mechanical faults need a separate car AC diagnosis."],
       ["Which car AC components are cleaned?", "The service can include vents and relevant car AC components such as the blower or coil, depending on the inspection and selected work."],
       ["Is the car AC cabin air filter replaced?", "The filter is checked and replacement can be discussed if needed; confirm whether it is included in your selected service."],
+      ["Should I book car AC cleaning or diagnosis?", "Cleaning may help with odours or dust. If cooling is weak or inconsistent, diagnosis can help identify a refrigerant or component fault."],
     ],
   },
 ];

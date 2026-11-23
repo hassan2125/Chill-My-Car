@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SV, PHONE_DISPLAY, PHONE_TEL, WA } from "@/lib/data";
+import { SV, PHONE_DISPLAY, PHONE_TEL, SERVICE_AVAILABILITY, WA } from "@/lib/data";
 import Icon from "./Icon";
 
 export default function Footer() {
@@ -23,7 +23,9 @@ export default function Footer() {
           <b>Contact</b>
           <a href={`tel:${PHONE_TEL}`}><Icon n="phone" />{PHONE_DISPLAY}</a>
           <a href="mailto:info@coolmycardubai.com"><Icon n="mail" />info@coolmycardubai.com</a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Al+Quoz%2C+Dubai" target="_blank" rel="noreferrer"><Icon n="pin" />Al Quoz, Dubai, UAE</a>
+          <a className="footer-service-location" href="https://www.google.com/maps/search/?api=1&query=Al+Quoz+4%2C+Dubai" target="_blank" rel="noopener noreferrer"><Icon n="pin" />Mobile service across Dubai from Al Quoz 4</a>
+          <div className="footer-contact-info"><Icon n="clock" /><p className="footer-info">Mobile Car AC Repair service: {SERVICE_AVAILABILITY}</p></div>
+          <div className="footer-contact-info"><Icon n="check" /><p className="footer-info">Payments: Cash, bank transfer, Visa and Mastercard</p></div>
         </div>
       </div>
       <p className="footer-bottom">
