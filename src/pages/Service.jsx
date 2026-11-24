@@ -107,8 +107,15 @@ export default function ServicePage() {
           </div>
         ))}
       </div>
-      <div className="service-included-footer">
-        <p>Not sure which AC work your car needs? We’ll explain the findings and answer your questions.</p>
+      <div
+        className="service-included-footer"
+        style={{ backgroundImage: 'linear-gradient(100deg, rgba(11,59,168,.72) 0%, rgba(11,59,168,.45) 58%, rgba(11,59,168,.3) 100%), url("https://images.pexels.com/photos/12986023/pexels-photo-12986023.jpeg")' }}
+      >
+        <div className="service-included-message">
+          <span className="service-included-eta-label"><Icon n="clock" />Average technician arrival</span>
+          <h3>{AVERAGE_ARRIVAL_MINUTES}<small>min</small></h3>
+          <p>Not sure which AC work your car needs? We’ll explain the findings and answer your questions.</p>
+        </div>
         <div className="service-included-actions">
           <a href={WA()} target="_blank" rel="noopener noreferrer" className="btn p"><Icon n="whatsapp" className="whatsapp-cta-icon" />Get a free quote</a>
           <a href={`tel:${PHONE_TEL}`} className="btn phone-cta service-phone-cta"><Icon n="phone" />{PHONE_DISPLAY}</a>
