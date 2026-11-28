@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route, Outlet, useLocation } from "react-router-dom";
+import { Routes, Route, Outlet, Navigate, useLocation } from "react-router-dom";
 import Icon from "@/components/Icon";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -21,10 +21,14 @@ function ScrollManager() {
   }, [pathname, hash, key]);
   return null;
 }
+function RefillRedirect() {
+  const { search, hash } = useLocation();
+  return <Navigate to={{ pathname: "/services/car-ac-gas-refill/", search, hash }} replace />;
+}
 function Layout() {
   return (<>
     <ScrollManager /><Nav /><Outlet /><Footer />
-    <a className="whatsapp-float" href={WA()} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <a className="whatsapp-float" href={WA("Hi Cool My Car Dubai! I'd like help with my car's AC. Could you share your availability?")} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
       <span className="whatsapp-float-icon"><Icon n="whatsapp" /></span>
     </a>
   </>);
@@ -35,6 +39,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
+        <Route path="services/gas-top-up" element={<RefillRedirect />} />
         <Route path="services/:slug" element={<Service />} />
         <Route path="about" element={<About />} />
         <Route path="gallery" element={<Gallery />} />

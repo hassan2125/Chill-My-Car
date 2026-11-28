@@ -15,7 +15,7 @@ export default function Simulator() {
         <div className="tog"><button className={k ? "" : "on hot"} onClick={() => setK(0)}>Before service</button><button className={k ? "on" : ""} onClick={() => setK(1)}>After service</button></div>
         <p className="sub">{m.n}</p>
       </div>
-      <div className="dash">
+      <div className="dash" data-state={k ? "after" : "before"}>
         <div className="dial" style={{ "--p": m.p }}><div><strong>{m.t}°</strong><span>Vent air</span></div></div>
         {["Airflow", "Gas pressure", "Cooling power"].map((l, i) => (<div className="bar" key={l}>{l}<div><i style={{ width: m.r[i] + "%" }} /></div></div>))}
       </div>

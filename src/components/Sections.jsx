@@ -24,13 +24,13 @@ export function Marquee() {
 }
 
 export function Services() {
-  const serviceOrder = ["ac-repair", "diagnosis", "gas-top-up", "gas-leak-repair", "deep-cleaning"];
+  const serviceOrder = ["ac-repair", "diagnosis", "car-ac-gas-refill", "gas-leak-repair", "deep-cleaning"];
   const orderedServices = serviceOrder.map((slug) => SV.find((service) => service.s === slug)).filter(Boolean);
 
   return (
     <section id="svc"><Reveal className="wrap">
       <span className="pill">Services</span><h2>Everything your<br />car AC needs.</h2>
-      <p className="sub">From a quick regas to full leak repair, our specialists handle every part of your cooling system.</p>
+      <p className="sub">From a gas refill to full leak repair, our specialists handle every part of your cooling system.</p>
       <ServiceCards services={orderedServices} />
     </Reveal></section>
   );
@@ -202,7 +202,7 @@ export function Areas({ title = <>Mobile service<br />across Dubai.</> }) {
 export function Faq({ id = "faq", title = "Good questions.", items }) {
   const list = items || [
     ["What are common signs my car AC needs attention?", "Warm air, weak airflow, unusual noises from the car AC or cooling that cuts out can indicate a fault. An inspection helps identify the cause."],
-    ["Does a car AC gas top-up fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
+    ["Does a car AC gas refill fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
     ["Do you inspect the car AC before recommending repairs?", "Yes. The findings and estimate are explained before any car AC repair work begins."],
     ["Can I request car AC service in my area?", "Share your location and car AC symptoms when booking so the team can confirm the available service option."],
     ["How do I book car AC repair?", "Chat with our team on WhatsApp and share your car details and AC symptoms to request a booking."],

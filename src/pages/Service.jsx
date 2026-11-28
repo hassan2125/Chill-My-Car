@@ -9,10 +9,10 @@ import { Marquee, ServiceCards, Testimonials } from "@/components/Sections";
 import { AVERAGE_ARRIVAL_MINUTES, PAGE_HERO_IMAGES, PHONE_DISPLAY, PHONE_TEL, SERVICE_AVAILABILITY, SERVICE_IMAGES, SERVICE_INCLUDE_DETAILS, SV, WA } from "@/lib/data";
 
 const RELATED_SERVICES = {
-  "ac-repair": ["diagnosis", "gas-leak-repair", "gas-top-up"],
-  "gas-top-up": ["gas-leak-repair", "diagnosis", "ac-repair"],
-  "gas-leak-repair": ["gas-top-up", "ac-repair", "diagnosis"],
-  diagnosis: ["ac-repair", "gas-top-up", "gas-leak-repair"],
+  "ac-repair": ["diagnosis", "gas-leak-repair", "car-ac-gas-refill"],
+  "car-ac-gas-refill": ["gas-leak-repair", "diagnosis", "ac-repair"],
+  "gas-leak-repair": ["car-ac-gas-refill", "ac-repair", "diagnosis"],
+  diagnosis: ["ac-repair", "car-ac-gas-refill", "gas-leak-repair"],
   "deep-cleaning": ["diagnosis", "ac-repair"],
 };
 
@@ -27,7 +27,6 @@ export default function ServicePage() {
   const relatedServices = (RELATED_SERVICES[s.s] || SV.filter((service) => service !== s).map((service) => service.s))
     .map((serviceSlug) => SV.find((service) => service.s === serviceSlug))
     .filter(Boolean);
-  const faqServiceName = s.s === "gas-top-up" ? "Car AC Gas Top-Up" : s.t;
   const workImages = [s, ...relatedServices.slice(0, 2)];
   const overviewImages = s.s === "deep-cleaning"
     ? [
@@ -66,7 +65,7 @@ export default function ServicePage() {
           </ul>
           <div className="ctas service-overview-actions">
             <a className="btn p" href={`tel:${PHONE_TEL}`}><Icon n="phone" />Call to discuss</a>
-            <a className="btn service-overview-outline" href={WA()} target="_blank" rel="noopener noreferrer"><Icon n="whatsapp" className="service-overview-whatsapp-icon" />Book Car AC Repair</a>
+            <a className="btn service-overview-outline" href={WA()} target="_blank" rel="noopener noreferrer"><Icon n="whatsapp" className="service-overview-whatsapp-icon" />{s.bookingLabel || "Book Car AC Repair"}</a>
           </div>
         </div>
         <div className="service-overview-gallery">
@@ -133,7 +132,7 @@ export default function ServicePage() {
     <section className="service-related-section"><Reveal className="wrap"><span className="pill">More car AC services</span>
       <h2>Related AC services.</h2><ServiceCards services={relatedServices} /></Reveal></section>
     <Testimonials />
-    <PageConversion faqTitle={`Questions about ${faqServiceName}.`} faqItems={faqItems} />
+    <PageConversion faqTitle={`Questions about ${s.t}.`} faqItems={faqItems} />
     <Cta />
   </main>);
 }

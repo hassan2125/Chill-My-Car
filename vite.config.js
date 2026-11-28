@@ -12,12 +12,12 @@ const pageMetadata = [
   {
     path: "",
     title: "Cool My Car Dubai | Car AC Repair in Dubai",
-    description: "Car AC repair in Dubai, including diagnostics, refrigerant regas, leak repair and AC cleaning. Get a clear estimate from Cool My Car Dubai.",
+    description: "Car AC repair in Dubai, including diagnostics, gas refill, leak repair and AC cleaning. Get a clear estimate from Cool My Car Dubai.",
   },
   {
     path: "services",
     title: "Car AC Services in Dubai | Cool My Car Dubai",
-    description: "Compare car AC repair, diagnosis, refrigerant top-up, leak repair and AC cleaning in Dubai. Find the right next step for weak cooling or unusual AC symptoms.",
+    description: "Compare car AC repair, diagnosis, gas refill, leak repair and AC cleaning in Dubai. Find the right next step for weak cooling or unusual AC symptoms.",
   },
   {
     path: "about",

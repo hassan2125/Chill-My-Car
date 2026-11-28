@@ -21,7 +21,7 @@ export function Banner({ title, sub, children, image }) {
 export function Cta({ title = "Ready for cooler air?" }) {
   return (
     <section style={{ padding: "10px 0 90px" }}><Reveal className="wrap"><div className="offer" style={{ gridTemplateColumns: "1fr" }}><div>
-      <h2>{title}</h2><p>Car AC repair, diagnostics, refrigerant top-ups, leak repair and AC cleaning across Dubai. Get a clear estimate before work begins.</p>
+      <h2>{title}</h2><p>Car AC repair, diagnostics, gas refills, leak repair and AC cleaning across Dubai. Get a clear estimate before work begins.</p>
       <div className="ctas"><a href={WA()} target="_blank" rel="noopener noreferrer" className="btn">Book free diagnosis <Icon n="arrow" /></a><a className="btn g" href={WA()} target="_blank" rel="noopener noreferrer">WhatsApp us</a></div>
     </div></div></Reveal></section>
   );

@@ -5,9 +5,9 @@ import PageConversion from "@/components/PageConversion";
 import { ServiceCards, Testimonials } from "@/components/Sections";
 import { AVERAGE_ARRIVAL_MINUTES, PAGE_HERO_IMAGES, SERVICE_AVAILABILITY, SV } from "@/lib/data";
 export default function Services() {
-  useTitle("Car AC Services in Dubai", "Compare car AC repair, diagnosis, refrigerant top-up, leak repair and AC cleaning in Dubai. Find the right next step for weak cooling or unusual AC symptoms.");
+  useTitle("Car AC Services in Dubai", "Compare car AC repair, diagnosis, gas refill, leak repair and AC cleaning in Dubai. Find the right next step for weak cooling or unusual AC symptoms.");
   return (<main>
-    <Banner title="Car AC services in Dubai" sub="From system diagnosis and refrigerant top-up to leak repair and AC cleaning, find the right service for your car." image={PAGE_HERO_IMAGES.services} />
+    <Banner title="Car AC services in Dubai" sub="From system diagnosis and gas refill to leak repair and AC cleaning, find the right service for your car." image={PAGE_HERO_IMAGES.services} />
     <section><Reveal className="wrap">
       <span className="pill">Our services</span>
       <h2>Find the right service for your car.</h2>

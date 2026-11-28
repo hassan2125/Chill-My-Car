@@ -3,7 +3,7 @@ export const PAGE_FAQS = {
     title: "Car AC questions.",
     items: [
       ["What are common signs my car AC needs attention?", "Warm air, weak airflow, unusual noises from the car AC or cooling that cuts out can indicate a fault. An inspection helps identify the cause."],
-      ["Does a car AC gas top-up fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
+      ["Does a car AC gas refill fix warm air?", "Only when low refrigerant is the cause. If refrigerant is escaping, the car AC leak should be checked before recharging."],
       ["Do you inspect the car AC before recommending repairs?", "Yes. The findings and estimate are explained before any car AC repair work begins."],
       ["Is mobile car AC service available 24/7?", "Yes. On-site mobile car AC service is available 24/7 across Dubai, with an average technician arrival time of 10–15 minutes."],
       ["How do I book car AC repair?", "Chat with our team on WhatsApp and share your car details and AC symptoms to request a booking."],
@@ -12,9 +12,9 @@ export const PAGE_FAQS = {
   services: {
     title: "Choosing a car AC service.",
     items: [
-      ["Which car AC services do you provide?", "Options include car AC repair, refrigerant top-up, leak repair, diagnosis and system cleaning."],
+      ["Which car AC services do you provide?", "Options include car AC repair, gas refill, leak repair, diagnosis and system cleaning."],
       ["When should I choose car AC diagnosis?", "Choose car AC diagnosis when you are unsure why the cooling is weak, intermittent or noisy. It helps identify the cause before repair is selected."],
-      ["How is a car AC top-up different from leak repair?", "A top-up restores refrigerant when it is low; car AC leak repair addresses refrigerant loss at its source. The system should be checked before recharging."],
+      ["How is a car AC gas refill different from leak repair?", "A refill restores refrigerant when it is low; car AC leak repair addresses refrigerant loss at its source. The system should be checked before recharging."],
       ["Is car AC cleaning the same as car AC repair?", "No. Car AC cleaning targets dust, odours and some airflow issues. Refrigerant or component faults need diagnosis and, if required, repair."],
       ["Can you service my car's make and model?", "Share the make, model and year when booking so the team can confirm the appropriate car AC service."],
     ],

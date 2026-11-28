@@ -2,7 +2,7 @@ import { useEffect } from "react";
 const BASE = "Cool My Car Dubai";
 const SITE_URL = "https://coolmycardubai.com";
 const SOCIAL_IMAGE = `${SITE_URL}/images/site/hero-cabin.webp`;
-const DEFAULT_DESCRIPTION = "Car AC repair in Dubai, including diagnostics, refrigerant regas, leak repair and AC cleaning. Get a clear estimate from Cool My Car Dubai.";
+const DEFAULT_DESCRIPTION = "Car AC repair in Dubai, including diagnostics, gas refill, leak repair and AC cleaning. Get a clear estimate from Cool My Car Dubai.";
 
 function updateMeta(attribute, name, content) {
   let meta = document.head.querySelector(`meta[${attribute}="${name}"]`);

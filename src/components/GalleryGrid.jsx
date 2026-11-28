@@ -4,7 +4,7 @@ import { SERVICE_IMAGES, SV } from "@/lib/data";
 const TABS = ["All", "Repair", "Cleaning", "Diagnosis", "On-site"];
 const CATEGORIES = {
   "ac-repair": ["Repair"],
-  "gas-top-up": ["Repair", "On-site"],
+  "car-ac-gas-refill": ["Repair", "On-site"],
   "gas-leak-repair": ["Repair"],
   diagnosis: ["Diagnosis", "On-site"],
   "deep-cleaning": ["Cleaning"],

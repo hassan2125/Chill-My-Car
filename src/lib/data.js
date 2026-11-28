@@ -24,21 +24,22 @@ export const SV = [
     ],
   },
   {
-    s: "gas-top-up",
+    s: "car-ac-gas-refill",
     i: "drop",
-    t: "AC Gas Top-Up",
-    seoTitle: "AC Gas Top-Up in Dubai",
-    seoDescription: "AC gas top-up in Dubai with refrigerant and pressure checks. If a leak is suspected, Cool My Car Dubai can help identify it before recharge.",
-    tag: "Pressure-checked refrigerant top-up for car AC.",
-    intro: "Low refrigerant can reduce cooling, but a top-up is not the answer to every AC fault. We check system pressure and symptoms before recommending a recharge.",
-    inc: ["AC system pressure checked", "Refrigerant matched to vehicle specification", "Leak symptoms assessed before recharge", "Cooling performance checked after service"],
-    sig: ["Cooling fades in traffic", "Air is cool, not cold", "Long wait to cool the cabin", "Cooling drops after a recent top-up"],
+    t: "Car AC Gas Refill",
+    bookingLabel: "Book Car AC Gas Refill",
+    seoTitle: "Car AC Gas Refill in Dubai",
+    seoDescription: "Car AC gas refill in Dubai with system pressure checks, vehicle-specific refrigerant and a cooling performance test.",
+    tag: "Mobile car AC gas refill in Dubai with pressure and cooling checks.",
+    intro: "Low refrigerant can make your car AC blow warm. We check system pressure and look for signs of a leak before recommending a refill. If a refill is suitable, we use refrigerant matched to your vehicle and verify cooling afterward.",
+    inc: ["AC system pressure checked", "Refrigerant matched to vehicle specification", "Leak symptoms assessed before refill", "Cooling performance checked after service"],
+    sig: ["Cooling fades in traffic", "Air is cool, not cold", "Long wait to cool the cabin", "Cooling drops after a recent refill"],
     faq: [
-      ["When is a car AC gas top-up appropriate?", "A recharge may help when refrigerant is low and no unresolved car AC leak is found. The system should be checked before topping it up."],
-      ["Do you check the car AC for leaks before recharging?", "We assess pressure and look for signs of refrigerant loss. If a leak is suspected, we recommend checking its source rather than repeatedly topping up."],
-      ["Will a car AC gas top-up fix every cooling problem?", "No. Weak cooling can also come from airflow, electrical or component faults. Car AC diagnosis helps determine the right service."],
-      ["Can I request car AC regas at my location?", "Location options depend on your area and the work required. Share your location when booking so the team can confirm."],
-      ["How do you choose the right refrigerant for my car?", "We match the refrigerant to the vehicle specification and check the AC system before recommending a top-up."],
+      ["When is a car AC gas refill appropriate?", "A recharge may help when refrigerant is low and no unresolved car AC leak is found. The system should be checked before refilling."],
+      ["Do you check the car AC for leaks before recharging?", "We assess pressure and look for signs of refrigerant loss. If a leak is suspected, we recommend checking its source before refilling."],
+      ["Will a car AC gas refill fix every cooling problem?", "No. Weak cooling can also come from airflow, electrical or component faults. Car AC diagnosis helps determine the right service."],
+      ["Can I request car AC gas refill at my location?", "Location options depend on your area and the work required. Share your location when booking so the team can confirm."],
+      ["How do you choose the right refrigerant for my car?", "We match the refrigerant to the vehicle specification and check the AC system before recommending a refill."],
     ],
   },
   {
@@ -74,7 +75,7 @@ export const SV = [
       ["Why is my car AC blowing warm air?", "Low refrigerant, a leak, restricted airflow or a component fault can reduce cooling. A system check helps distinguish between causes."],
       ["Does car AC diagnosis include a repair?", "Diagnosis identifies the likely cause and recommended work. Car AC repairs are discussed with you and only proceed after approval."],
       ["Can you diagnose intermittent car AC cooling?", "Yes. Share when the cooling drops out and any other symptoms so the inspection can focus on the conditions you notice."],
-      ["What should I tell the technician before car AC diagnosis?", "Share when the problem occurs, any unusual sounds or smells, and recent AC work or refrigerant top-ups."],
+      ["What should I tell the technician before car AC diagnosis?", "Share when the problem occurs, any unusual sounds or smells, and recent AC work or gas refills."],
     ],
   },
   {
@@ -113,7 +114,7 @@ export const PAGE_HERO_IMAGES={
 };
 export const SERVICE_IMAGES={
   "ac-repair":"/images/site/service-ac-repair.webp",
-  "gas-top-up":"/images/site/service-gas-top-up.webp",
+  "car-ac-gas-refill":"/images/site/service-gas-top-up.webp",
   "gas-leak-repair":"https://i.pinimg.com/1200x/2c/48/ea/2c48ea8c6ffbdd23c4ba6d52d2e336df.jpg",
   diagnosis:"/images/site/service-diagnosis.webp",
   "deep-cleaning":"https://i.pinimg.com/1200x/94/3f/90/943f90c1d9458c980518266a417becbe.jpg",
@@ -125,11 +126,11 @@ export const SERVICE_INCLUDE_DETAILS={
     "Checks of system operation and performance.",
     "Vent cleaning to support clean airflow."
   ],
-  "gas-top-up":[
-    "Refill based on the vehicle’s AC requirements.",
-    "Pressure checked as part of the regas.",
-    "Cooling performance checked after service.",
-    "Suitable options for a range of vehicle models."
+  "car-ac-gas-refill":[
+    "We check AC system pressure before recommending a refill.",
+    "We use the refrigerant specified for your vehicle.",
+    "We look for signs of a leak before adding refrigerant.",
+    "We check how well your AC cools after the refill."
   ],
   "gas-leak-repair":[
     "Leak source identified before repair.",
