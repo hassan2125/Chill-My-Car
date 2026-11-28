@@ -37,7 +37,7 @@ export default function ServicePage() {
     : workImages;
   const faqItems = s.faq;
   return (<main className="service-detail-page">
-    <Banner title={s.t} sub={s.tag} image={PAGE_HERO_IMAGES.services} />
+    <Banner title={s.t} sub={s.heroDescription} image={PAGE_HERO_IMAGES.services} />
     <section className="service-overview-section"><Reveal className="wrap">
       <div className="service-overview-layout">
         <div className="service-overview-copy">

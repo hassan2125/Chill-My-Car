@@ -390,6 +390,7 @@ h1,h2,h3{letter-spacing:-.035em}
 .about-page .pb-with-image:after,.gallery-page .pb-with-image:after,.brands-page .pb-with-image:after,.contact-page .pb-with-image:after{background:#00000038}
 .service-detail-page .pb-background-image{filter:brightness(1.22) contrast(1.06) saturate(1.06)}
 .service-detail-page .pb-with-image:after{background:#00000012}
+.service-detail-page .pb .lead{max-width:60ch;font-size:clamp(1.0625rem,2vw,1.25rem);line-height:1.55}
 .pb:before{z-index:2}
 .pb .wrap{position:relative;z-index:3}.pb h1{font-size:var(--heading-1);font-weight:800;margin:14px 0}.pb .lead{margin-bottom:28px}
 .two{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}

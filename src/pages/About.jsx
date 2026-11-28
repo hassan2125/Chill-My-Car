@@ -7,7 +7,7 @@ import { PAGE_HERO_IMAGES, SERVICE_IMAGES } from "@/lib/data";
 export default function About() {
   useTitle("About Cool My Car Dubai", "Cool My Car Dubai provides 24/7 mobile car AC service across Dubai, with an average technician arrival time of 10–15 minutes.");
   return (<main className="about-page">
-    <Banner title="Car AC specialists in Dubai" sub="Cool My Car Dubai focuses on mobile vehicle air-conditioning service across Dubai." image={PAGE_HERO_IMAGES.about} />
+    <Banner title="Car AC specialists in Dubai" sub="Our team provides 24/7 mobile car AC repair and diagnostics across Dubai." image={PAGE_HERO_IMAGES.about} />
     <section className="about-story-section"><Reveal className="wrap about-story">
       <div className="about-story-copy"><span className="pill">Our story</span><h2>Built for Dubai’s heat.</h2>
         <p className="sub">Cool My Car Dubai was created to make car AC repair in Dubai straightforward and dependable. Because reliable cooling matters in the UAE heat, we focus on careful diagnosis, genuine parts and clear explanations before work begins.</p>
